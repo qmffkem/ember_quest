@@ -6,10 +6,11 @@ import "package:ember_quest/objects/star.dart";
 import "package:flame/game.dart";
 import "package:flame/components.dart";
 import "package:flutter/widgets.dart";
+import 'package:flame/events.dart';
 
 import "actors/ember.dart";
 
-class EmberQuestGame extends FlameGame {
+class EmberQuestGame extends FlameGame with HasKeyboardHandlerComponents {
   late EmberPlayer _ember;
   double objectSpeed = 0.0;
   late double lastBlockXPosition = 0.0;
